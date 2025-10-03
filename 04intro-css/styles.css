@@ -1,0 +1,106 @@
+/* ===== palette (left column only) ===== */
+:root{
+  --pink:#ffbdbd;
+  --tan:#ebe2c7;
+  --blue:#bfc9d3;
+  --ink:#222;
+}
+
+/* base */
+body{
+  font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  font-weight:400;           /* weight 1 */
+  font-size:16px;            /* size 1 */
+  line-height:1.5;
+  margin:0;
+  background-color:var(--tan);  /* background color used */
+  color:var(--ink);
+}
+
+/* headings */
+h1{
+  font-weight:700;           /* weight 2 */
+  font-size:2rem;            /* size 2 */
+  margin:1rem;
+}
+h2{
+  font-weight:700;
+  font-size:1.25rem;
+  margin:1.5rem 1rem .5rem;
+}
+
+/* paragraphs */
+p{ margin:0 1rem 1rem; }
+
+/* navigation (horizontal with flex) */
+nav{
+  background-color:var(--blue);
+  border-bottom:3px solid var(--pink); /* border: color/type/thickness */
+}
+nav ul{
+  display:flex;              /* horizontal */
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+nav a{
+  display:flex;
+  align-items:center;
+  min-height:48px;           /* 48px target */
+  padding:0 16px;
+  color:var(--ink);
+  text-decoration:none;      /* remove underline */
+  font-weight:700;
+}
+nav a:hover{                 /* pseudo-class */
+  background-color:var(--pink);
+}
+nav a[aria-current="page"]{  /* way-finding */
+  background:#fff;
+  outline:2px solid var(--pink);
+  outline-offset:-2px;
+}
+
+/* lists inside main content */
+main ul{
+  list-style-type:square;    /* custom bullets */
+  padding-left:1.25rem;
+  margin:0 1rem 1rem 2rem;   /* padding & margin styling */
+}
+main ol{
+  padding-left:1.25rem;
+  margin:0 1rem 1rem 2rem;
+}
+
+/* definition list (with border + radius) */
+main dl{
+  border:1px solid var(--blue);
+  border-radius:6px;
+  padding:.75rem;
+  margin:0 1rem 1rem;
+}
+main dt{ font-weight:700; }
+main dd{ margin:0 0 .5rem 1rem; }
+
+/* content links */
+main a{
+  color:var(--ink);
+  text-decoration:underline;
+}
+main a:hover{
+  text-decoration:none;
+  background:var(--pink);
+}
+
+/* address box */
+address{
+  border:1px solid var(--blue);
+  border-radius:6px;
+  padding:.5rem;
+  margin:1rem;
+}
+
+/* footer */
+footer{ font-size:.875rem; padding:0 1rem 1rem; }
+
+/* ===== end ===== */
