@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Book a Session — Ava Lulu Photo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img class="logo" src="images/artist%20chop.png" alt="Ava Lulu Photo logo" width="40" height="40">
+      <span class="site-name">AVA LULU PHOTO</span>
+    </div>
+    <p class="tagline">Elegant • Timeless • Warm</p>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="booking.html" class="active">Book</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Book Your Session</h1>
+    <form class="booking-form" method="get" action="thanks.html">
+      <fieldset>
+        <legend>Contact Info</legend>
+        <label>Name <input type="text" name="name" required></label>
+        <label>Email <input type="email" name="email" required></label>
+        <label>Phone <input type="tel" name="phone" required></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Session Type</legend>
+        <label><input type="radio" name="session" value="individual"> Individual</label>
+        <label><input type="radio" name="session" value="couples"> Couples</label>
+        <label><input type="radio" name="session" value="family"> Family</label>
+
+        <p><strong>Add-ons</strong></p>
+        <label><input type="checkbox" name="addon" value="time"> Extra Time</label>
+        <label><input type="checkbox" name="addon" value="location"> Second Location</label>
+        <label><input type="checkbox" name="addon" value="film"> Film Photography</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Session Details</legend>
+        <label>Date preference <input type="text" name="date"></label>
+        <label>Location
+          <select name="location">
+            <option value="mountains">Mountains</option>
+            <option value="fields">Open Field</option>
+            <option value="studio">Studio</option>
+          </select>
+        </label>
+        <label>Message <textarea name="message" rows="4"></textarea></label>
+      </fieldset>
+
+      <button class="btn" type="submit">Submit Inquiry</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Ava Lulu Photo • <a href="mailto:avaluluphoto@gmail.com">avaluluphoto@gmail.com</a></p>
+  </footer>
+</body>
+</html>
