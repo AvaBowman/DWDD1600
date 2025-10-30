@@ -1,0 +1,126 @@
+/* =========================================================
+   Ava Lulu Photo — Light blue theme
+   Headings: Playfair Display  |  Body: Inter
+
+   Unit04: External stylesheet + comments, fonts, sizes, weights
+   ========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;600;700&display=swap');
+
+/* === Color tokens (Unit04: background + color use) === */
+:root{
+  --bg:#F7FBFF;              /* page background */
+  --ink:#0E2440;             /* main text color */
+  --soft:#EDF5FF;            /* soft surface */
+  --accent:#5CA8FF;          /* light blue accent */
+  --accent-soft:#E8F2FF;     /* subtle hover fill */
+  --accent-rgb:92,168,255;   /* RGB for rgba tints */
+  --muted:rgba(14,36,64,.08);
+
+  --shadow-sm:0 2px 6px rgba(14,36,64,.05);
+  --shadow-md:0 8px 20px rgba(14,36,64,.10);
+  --shadow-lg:0 16px 36px rgba(14,36,64,.12);
+}
+
+/* === Base === */
+*{ box-sizing:border-box; }
+html, body{ height:100%; }
+body{
+  margin:0;
+  font-family:"Inter", system-ui, sans-serif; /* Unit04: font-family */
+  font-size:1rem; /* Unit04: font-size */
+  color:var(--ink);
+  background:
+    radial-gradient(1000px 500px at 70% -5%, var(--soft), transparent 60%),
+    var(--bg);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* === Main container === */
+main{ max-width:1100px; margin:0 auto; padding:1.5rem 1rem 2.5rem; }
+
+/* === Type scale === */
+h1, h2{
+  font-family:"Playfair Display", Georgia, serif; /* Unit04: second family */
+  line-height:1.2;
+  color:#0E2440;
+  margin:0;
+}
+h1{
+  font-size:clamp(2rem, 3vw + 1rem, 3rem); /* Unit04: different sizes */
+  font-weight:700; /* Unit04: heavier weight */
+  padding-bottom:.4rem;
+  border-bottom:3px solid var(--accent);
+  margin-bottom:1rem;
+}
+h2{
+  font-size:clamp(1.3rem, 1.6vw + 1rem, 1.8rem);
+  font-weight:600; /* Unit04: second weight */
+  margin:2.2rem 0 .6rem;
+}
+p{ margin:0 0 1rem; }
+
+/* === Header + nav === */
+.site-header{ position:sticky; top:0; z-index:10; background:rgba(255,255,255,.9); backdrop-filter:blur(8px); border-bottom:1px solid var(--muted); box-shadow:0 4px 10px rgba(14,36,64,.05); }
+.brand{ max-width:1100px; margin:0 auto; padding:.7rem 1rem .2rem; display:flex; align-items:center; gap:.7rem; }
+.logo{ width:40px; height:40px; border-radius:50%; display:inline-block; box-shadow:var(--shadow-sm); }
+.site-name{ font-family:"Playfair Display", serif; letter-spacing:.15em; font-weight:700; font-size:1.15rem; color:var(--accent); }
+.tagline{ margin:.15rem 0 .8rem 3.2rem; color:#4A5C77; font-size:.9rem; }
+.site-nav ul{ display:flex; gap:.6rem; list-style:none; margin:0 auto; padding:.5rem 1rem 1rem; max-width:1100px; }
+.site-nav a{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:.6rem 1rem; min-height:48px; /* Unit04: >=48px */
+  text-decoration:none; color:var(--ink);
+  border-radius:999px; border:1px solid transparent; background:#fff; transition:all .2s ease;
+}
+.site-nav a:hover{ background:var(--accent-soft); border-color:var(--accent); color:var(--accent); }
+.site-nav a.active{ background:var(--accent); color:#fff; border-color:var(--accent); }
+
+/* === Unit05: Home figure floated right, % width === */
+.hero-figure{ float:right; width:40%; margin:0 0 1rem 1.25rem; text-align:center; }
+.hero-figure img{ width:100%; height:auto; border-radius:18px; border:1px solid var(--muted); box-shadow:var(--shadow-lg); transition:transform .3s ease; }
+.hero-figure img:hover{ transform:scale(1.02); }
+.hero-figure figcaption{ font-size:.9rem; color:#4A5C77; margin-top:.4rem; }
+/* Specific hook (no change needed beyond percent width above) */
+.hero-figure-home{}
+
+/* === Pricing cards === */
+.pricing{ margin-top:1rem; }
+.pricing-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; }
+.price-card{ background:#fff; border:1px solid var(--muted); border-radius:14px; padding:1rem 1rem 1.1rem; box-shadow:var(--shadow-md); transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+.price-card:hover{ transform:translateY(-3px); box-shadow:var(--shadow-lg); border-color:var(--accent-soft); }
+.price-card h3{ font-family:"Playfair Display", serif; margin:.2rem 0 .4rem; font-size:1.35rem; font-weight:600; color:#0E2440; }
+.price{ font-weight:700; color:var(--accent); margin:.1rem 0 .6rem; }
+.features{ list-style:disc; padding-left:1.1rem; margin:0 0 .9rem; } /* Unit04: list bullets styled */
+.features li{ padding:.25rem .2rem; }
+
+/* === Lists + definition list === */
+.bullet-list{ list-style:square inside; /* Unit04: change bullet type */ padding:.4rem .6rem; margin:.5rem 0; }
+.bullet-list li{ background:#fff; border:1px solid var(--muted); border-left:4px solid var(--accent); border-radius:10px; padding:.6rem .9rem; margin:.5rem 0; box-shadow:var(--shadow-sm); }
+.defs{ border:1px solid var(--muted); border-radius:14px; padding:1rem 1.1rem; background:#fff; box-shadow:var(--shadow-md); }
+.defs dt{ font-weight:700; color:var(--accent); margin-top:.75rem; }
+.defs dd{ margin:.25rem 0 .8rem 1rem; color:#2F4668; }
+
+/* === Unit05: Gallery (Flexbox rows/columns) === */
+.gallery{ display:flex; flex-wrap:wrap; gap:14px; align-items:flex-start; }
+.gallery figure{ flex:1 1 calc(33.333% - 14px); background:#fff; border:1px solid var(--muted); border-radius:14px; padding:8px; box-shadow:var(--shadow-md); transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+.gallery figure:hover{ transform:translateY(-3px); box-shadow:var(--shadow-lg); border-color:var(--accent-soft); }
+.gallery img{ display:block; width:100%; height:auto; object-fit:cover; border-radius:10px; }
+.gallery figcaption{ text-align:center; font-size:.9rem; color:#27446D; margin-top:6px; }
+
+/* === Footer + links === */
+.site-footer{ clear:both; border-top:1px solid var(--muted); background:#fff; padding:1rem; text-align:center; color:#4A5C77; }
+main a{ color:var(--accent); text-decoration:none; border-bottom:1px dotted rgba(var(--accent-rgb), .45); }
+main a:hover{ text-decoration:underline; } /* Unit04: hover pseudo-class */
+
+/* === Responsive === */
+@media (max-width:1000px){
+  .pricing-grid{ grid-template-columns:repeat(2,1fr); }
+  .gallery figure{ flex-basis:calc(50% - 14px); }
+}
+@media (max-width:640px){
+  .hero-figure{ float:none; width:100%; margin:0 0 1rem 0; }
+  .tagline{ margin-left:0; }
+  .pricing-grid{ grid-template-columns:1fr; }
+  .gallery figure{ flex-basis:100%; }
+}
