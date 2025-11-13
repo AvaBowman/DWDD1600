@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Ava Lulu Photo — Elegant Photography by Ava Bowman</title>
+  <meta name="author" content="Ava Bowman" />
+  <meta name="description" content="Ava Lulu Photo — elegant, timeless photography in Utah. Portraits, couples, and families by Ava Bowman." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#5CA8FF">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <img class="logo" src="images/artist%20chop.png" alt="Ava Lulu Photo logo" width="40" height="40">
+        <div>
+          <span class="site-name">AVA LULU PHOTO</span>
+          <p class="tagline">Elegant • Timeless • Warm</p>
+        </div>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">☰</button>
+      </div>
+      <nav id="primary-nav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="booking.html">Book</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Full-width hero image -->
+  <section class="hero-banner">
+    <img src="images/avacochran241003-0322.jpeg" alt="Golden blue sky above a portrait scene" width="2400" height="1400" loading="eager">
+  </section>
+
+  <main class="wrap">
+    <h1>Capture Your Treasured Memories</h1>
+    <p><strong>Ava Lulu Photo</strong> creates warm, natural images that feel like you.
+      I focus on genuine moments, soft light, and the details that tell your story.
+      I’m also a <em>graphic designer</em>, so every gallery is crafted with composition and style.</p>
+
+    <p>Popular sessions include individuals, couples, and families. Each session includes thoughtful
+      editing and a high-resolution gallery. I’m based in Utah County and love mountain locations and open fields.</p>
+
+    <h2>Packages</h2>
+    <section class="pricing">
+      <div class="pricing-grid">
+        <article class="price-card">
+          <h3>Individual</h3>
+          <p class="price">$85</p>
+          <ul class="features">
+            <li>45 minutes</li>
+            <li>1 outfit</li>
+            <li>30 digital photos</li>
+          </ul>
+          <a class="card-cta" href="booking.html">Book Individual</a>
+        </article>
+
+        <article class="price-card">
+          <h3>Couples</h3>
+          <p class="price">$100</p>
+          <ul class="features">
+            <li>45 minutes</li>
+            <li>2 outfits</li>
+            <li>40 digital photos</li>
+          </ul>
+          <a class="card-cta" href="booking.html">Book Couples</a>
+        </article>
+
+        <article class="price-card">
+          <h3>Family</h3>
+          <p class="price">$175</p>
+          <ul class="features">
+            <li>60 minutes</li>
+            <li>Groups up to 6</li>
+            <li>2 outfits</li>
+            <li>50 digital photos</li>
+          </ul>
+          <a class="card-cta" href="booking.html">Book Family</a>
+        </article>
+      </div>
+    </section>
+
+    <h2>Add-Ons</h2>
+    <dl class="defs">
+      <dt>Extra time</dt><dd>Extend your session in 30-minute blocks for more poses and locations.</dd>
+      <dt>Dance photos</dt><dd>Movement-focused shots — perfect for lively, candid moments.</dd>
+      <dt>Second location</dt><dd>Two settings in one day for extra variety and storytelling.</dd>
+      <dt>Additional outfits</dt><dd>Add more looks to fit your style and mood.</dd>
+      <dt>Film photography</dt><dd>Optional 35 mm film with scans for a timeless, organic feel.</dd>
+    </dl>
+
+    <h2>How It Works</h2>
+    <ol>
+      <li>Pick a package</li>
+      <li>Choose a date and time</li>
+      <li>Receive a personalized confirmation</li>
+    </ol>
+
+    <p>Related resources:
+      <a href="https://pixlr.com" target="_blank" rel="noopener">PIXLR</a> •
+      <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a>
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; 2025 Ava Lulu Photo • <a href="mailto:avaluluphoto@gmail.com">avaluluphoto@gmail.com</a> • <a href="https://instagram.com/avaluluphoto" target="_blank" rel="noopener">@avaluluphoto</a></p>
+      <address>Utah County • <a href="tel:+18015551234">+1 (801) 555-1234</a></address>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('#primary-nav');
+    if (btn && nav) {
+      btn.addEventListener('click', () => {
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        nav.classList.toggle('open');
+      });
+    }
+  </script>
+</body>
+</html>

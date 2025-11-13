@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Gallery — Ava Lulu Photo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#5CA8FF">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <img class="logo" src="images/artist%20chop.png" alt="Ava Lulu Photo logo" width="40" height="40">
+        <div>
+          <span class="site-name">AVA LULU PHOTO</span>
+          <p class="tagline">Elegant • Timeless • Warm</p>
+        </div>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">☰</button>
+      </div>
+      <nav id="primary-nav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="booking.html">Book</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>Gallery</h1>
+    <p>Some moments I’ve captured</p>
+
+    <section class="gallery">
+      <figure>
+        <img src="images/electraXrob.jpeg" alt="Couple embracing outdoors" width="300" height="400" loading="lazy">
+        <figcaption>Electra &amp; Rob — golden hour portraits.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/melaniewedding.jpeg" alt="Wedding table florals with soft pinks" width="300" height="400" loading="lazy">
+        <figcaption>Wedding florals — soft color and detail.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/konXwav.jpeg" alt="Couple smiling in front of their home" width="300" height="400" loading="lazy">
+        <figcaption>Homefront love — relaxed and real.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/leaningtowerofpisa.jpeg" alt="Leaning Tower of Pisa" width="300" height="400" loading="lazy">
+        <figcaption>Travel frame — Leaning Tower of Pisa.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/weddingfilm.jpeg" alt="Black and white couple photo on film" width="300" height="400" loading="lazy">
+        <figcaption>Timeless on film — classic black &amp; white.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/flagfootball.jpeg" alt="Athlete catching a football mid-air" width="300" height="400" loading="lazy">
+        <figcaption>Fast action — flag football catch.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/avacochran241003-0300-2.jpeg" alt="Close-up of a vintage Mercedes emblem" width="300" height="400" loading="lazy">
+        <figcaption>Vintage detail — Mercedes emblem.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/acochran241013-0376.jpeg" alt="Portrait of a young man in soft light" width="300" height="400" loading="lazy">
+        <figcaption>Natural light portrait.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/avacochran250208-111_1133-2.jpg" alt="Formal group photo at marble venue" width="300" height="400" loading="lazy">
+        <figcaption>Formal group — city hall elegance.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/111.AvaLulu-64.jpg" alt="Girl standing in a sunny field" width="300" height="400" loading="lazy">
+        <figcaption>Field portrait — warm, candid, joyful.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/avacochran241111-111_0988.jpg" alt="Woman holding a vintage camera in studio" width="300" height="400" loading="lazy">
+        <figcaption>Studio charm — vintage camera love.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/111.AvaLulu-81.jpg" alt="Bouquet of pink flowers against a blue sky" width="300" height="400" loading="lazy">
+        <figcaption>Bouquet against blue sky — fresh and bright.</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; 2025 Ava Lulu Photo • <a href="mailto:avaluluphoto@gmail.com">avaluluphoto@gmail.com</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('#primary-nav');
+    if (btn && nav) {
+      btn.addEventListener('click', () => {
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        nav.classList.toggle('open');
+      });
+    }
+  </script>
+</body>
+</html>
