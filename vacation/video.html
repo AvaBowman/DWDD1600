@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Italy Travel Video — The Italian Itinerary</title>
+  <meta name="description" content="A calm Italy travel video with moments from Milan, Lake Como, Bologna, Florence and Rome.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="brand">
+    <a href="index.html">
+      <img src="images/LOGO.jpg" alt="The Italian Itinerary logo." style="height:40px; width:auto;">
+      <div>
+        <span class="brand-text-main">The Italian Itinerary</span>
+        <span class="brand-text-sub">Traveling Italy on a gentle budget</span>
+      </div>
+    </a>
+  </div>
+
+  <button class="nav-toggle" aria-label="Toggle navigation">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="video.html" class="current">Video</a></li>
+      <li><a href="packages.html">Packages</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="card">
+    <h1 class="page-title">Italy travel video</h1>
+    <p>
+      Here is a video from my travels around Italy. Each place felt different and beautiful in its own way,
+      from bright city squares to slow lakeside views and long walks under old porticos.
+    </p>
+    <p>
+      This video is just a glimpse of those moments, but it captures the feeling of moving through Italy at
+      an easy pace. I hope watching it makes you want to explore these cities for yourself.
+    </p>
+  </section>
+
+  <section class="video-shell">
+    <div class="responsive-video">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/4DtdSSuQHx0?si=oj8srZ3b0DCsZRqa"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> The Italian Itinerary.</p>
+</footer>
+
+<script>
+  const yearSpan = document.getElementById("year");
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
+
+  const navToggle = document.querySelector(".nav-toggle");
+  if (navToggle) {
+    navToggle.addEventListener("click", function () {
+      document.body.classList.toggle("nav-open");
+    });
+  }
+</script>
+</body>
+</html>
