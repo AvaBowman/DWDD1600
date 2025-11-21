@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Thank You — Ava Lulu Photo</title>
+  <meta http-equiv="refresh" content="5; url=index.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#5CA8FF">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <img class="logo" src="images/artist%20chop.png" alt="Ava Lulu Photo logo" width="40" height="40">
+        <div>
+          <span class="site-name">AVA LULU PHOTO</span>
+          <p class="tagline">Elegant • Timeless • Warm</p>
+        </div>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">☰</button>
+      </div>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="booking.html" class="active">Book</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="visit.html">Visit</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>Thank You!</h1>
+    <p>Your inquiry has been sent. I’ll reply as soon as I can with date options and next steps.</p>
+    <p>You’ll be redirected back to the home page in a few seconds. If not, you can return to the <a href="index.html">home page</a>.</p>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; 2025 Ava Lulu Photo • <a href="mailto:avaluluphoto@gmail.com">avaluluphoto@gmail.com</a></p>
+      <address>Utah County • <a href="tel:+18015551234">+1 (801) 555-1234</a> • <a href="https://www.instagram.com/avaluluphoto" target="_blank" rel="noopener">@avaluluphoto</a></address>
+    </div>
+  </footer>
+
+  <!-- NAV TOGGLE -->
+  <script>
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('#primary-nav');
+    if (btn && nav) {
+      btn.addEventListener('click', () => {
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        nav.classList.toggle('open');
+      });
+    }
+  </script>
+</body>
+</html>
