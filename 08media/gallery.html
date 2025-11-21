@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Gallery — Ava Lulu Photo</title>
+  <meta name="description" content="A curated gallery of portraits, couples, families, and details by Ava Lulu Photo.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#5CA8FF">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <img class="logo" src="images/artist%20chop.png" alt="Ava Lulu Photo logo" width="40" height="40">
+        <div>
+          <span class="site-name">AVA LULU PHOTO</span>
+          <p class="tagline">Elegant • Timeless • Warm</p>
+        </div>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">☰</button>
+      </div>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="booking.html">Book</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="visit.html">Visit</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>Gallery</h1>
+    <p>Some of the stories and details I’ve captured on digital and film.</p>
+
+    <section class="gallery">
+      <figure>
+        <img src="images/electraXrob.jpeg" alt="Couple embracing outdoors at golden hour" width="300" height="400" loading="lazy">
+        <figcaption>Electra &amp; Rob — golden hour portraits.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/melaniewedding.jpeg" alt="Wedding table lined with florals and candles" width="300" height="400" loading="lazy">
+        <figcaption>Wedding florals — soft color and detail.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/konXwav.jpeg" alt="Couple smiling together in front of their home" width="300" height="400" loading="lazy">
+        <figcaption>Homefront love — relaxed and real.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/leaningtowerofpisa.jpeg" alt="Group of travelers posing in front of the Leaning Tower of Pisa" width="300" height="400" loading="lazy">
+        <figcaption>Travel memories — Italy on film.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/weddingfilm.jpeg" alt="Black and white wedding couple dancing" width="300" height="400" loading="lazy">
+        <figcaption>Wedding on film — timeless and romantic.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/flagfootball.jpeg" alt="Football player jumping to catch a pass" width="300" height="400" loading="lazy">
+        <figcaption>Fast action — flag football catch.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/avacochran241003-0300-2.jpeg" alt="Close up of vintage Mercedes emblem on a car" width="300" height="400" loading="lazy">
+        <figcaption>Vintage detail — Mercedes emblem.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/acochran241013-0376.jpeg" alt="Portrait of a young man smiling in soft light" width="300" height="400" loading="lazy">
+        <figcaption>Natural light portrait.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/avacochran250208-111_1133-2.jpg" alt="Formal group photo in a marble venue" width="300" height="400" loading="lazy">
+        <figcaption>Formal group — classic and polished.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/111.AvaLulu-64.jpg" alt="Portrait of Ava standing in a sunny field" width="300" height="400" loading="lazy">
+        <figcaption>Self portrait — sun and sagebrush.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/avacochran241111-111_0988.jpg" alt="Black and white portrait of a woman in a sweatshirt" width="300" height="400" loading="lazy">
+        <figcaption>Film portrait — quiet and thoughtful.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/111.AvaLulu-81.jpg" alt="Colorful bouquet of flowers against a blue sky" width="300" height="400" loading="lazy">
+        <figcaption>Details — bright florals on film.</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; 2025 Ava Lulu Photo • <a href="mailto:avaluluphoto@gmail.com">avaluluphoto@gmail.com</a></p>
+      <address>Utah County • <a href="tel:+18015551234">+1 (801) 555-1234</a> • <a href="https://www.instagram.com/avaluluphoto" target="_blank" rel="noopener">@avaluluphoto</a></address>
+    </div>
+  </footer>
+
+  <!-- NAV TOGGLE -->
+  <script>
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('#primary-nav');
+    if (btn && nav) {
+      btn.addEventListener('click', () => {
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        nav.classList.toggle('open');
+      });
+    }
+  </script>
+</body>
+</html>
