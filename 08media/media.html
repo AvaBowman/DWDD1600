@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Media — Ava Lulu Photo</title>
+  <meta name="description" content="Media page for Ava Lulu Photo with session overview table, video, and audio intro.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#5CA8FF">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <img class="logo" src="images/artist%20chop.png" alt="Ava Lulu Photo logo" width="40" height="40">
+        <div>
+          <span class="site-name">AVA LULU PHOTO</span>
+          <p class="tagline">Elegant • Timeless • Warm</p>
+        </div>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">☰</button>
+      </div>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="booking.html">Book</a></li>
+          <li><a href="media.html" class="active">Media</a></li>
+          <li><a href="visit.html">Visit</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>Media</h1>
+    <p>This page brings everything together — packages at a glance, a short video, and a quick audio intro so you can get to know me and my style.</p>
+
+    <!-- TABLE -->
+    <h2>Session Overview</h2>
+    <div class="table-wrapper">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Session Type</th>
+            <th>Length</th>
+            <th>Starting Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Individual Portrait</td>
+            <td>45 minutes</td>
+            <td>$85</td>
+          </tr>
+          <tr>
+            <td>Couples</td>
+            <td>45 minutes</td>
+            <td>$100</td>
+          </tr>
+          <tr>
+            <td>Family (up to 6)</td>
+            <td>60 minutes</td>
+            <td>$175</td>
+          </tr>
+          <tr>
+            <td>Extended Family</td>
+            <td>75 minutes</td>
+            <td>$225</td>
+          </tr>
+          <tr>
+            <td>Mini Session</td>
+            <td>20 minutes</td>
+            <td>$65</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- VIDEO -->
+    <h2>Behind the Lens</h2>
+    <p>Here’s a behind the scenes video that reflects how my sessions typically go!</p>
+
+    <div class="video-wrap">
+      <iframe
+        src="https://www.youtube.com/embed/CX1Cnc7XABg?si=f8Z5zaaIRPxTyNAQ"
+        title="Ava Lulu Photo behind-the-lens video"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- AUDIO -->
+    <h2>Audio Intro</h2>
+    <p>Listen to a short audio note where I explain what it’s like to work together before, during, and after your session.</p>
+
+    <audio controls>
+      <!-- Put these files in an audio/ folder -->
+      <source src="audio/ava-lulu-intro.ogg" type="audio/ogg">
+      <source src="audio/ava-lulu-intro.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; 2025 Ava Lulu Photo • <a href="mailto:avaluluphoto@gmail.com">avaluluphoto@gmail.com</a></p>
+      <address>Utah County • <a href="tel:+18015551234">+1 (801) 555-1234</a> • <a href="https://www.instagram.com/avaluluphoto" target="_blank" rel="noopener">@avaluluphoto</a></address>
+    </div>
+  </footer>
+
+  <!-- NAV TOGGLE -->
+  <script>
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('#primary-nav');
+    if (btn && nav) {
+      btn.addEventListener('click', () => {
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        nav.classList.toggle('open');
+      });
+    }
+  </script>
+</body>
+</html>
