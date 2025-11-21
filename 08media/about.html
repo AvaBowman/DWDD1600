@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>About — Ava Lulu Photo</title>
+  <meta name="description" content="Meet Ava Bowman, the photographer behind Ava Lulu Photo. Utah-based photographer capturing natural, timeless, and elegant moments.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#5CA8FF">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <img class="logo" src="images/artist%20chop.png" alt="Ava Lulu Photo logo" width="40" height="40">
+        <div>
+          <span class="site-name">AVA LULU PHOTO</span>
+          <p class="tagline">Elegant • Timeless • Warm</p>
+        </div>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">☰</button>
+      </div>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="booking.html">Book</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="visit.html">Visit</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>Meet Ava</h1>
+
+    <figure class="hero-figure">
+      <img src="images/IMG_5894.jpeg"
+           alt="Ava Bowman smiling in a mountain field holding her camera"
+           width="800" height="1000" loading="lazy">
+      <figcaption>Behind the lens — Ava Lulu Photo</figcaption>
+    </figure>
+
+    <p>Hi, I’m <strong>Ava Bowman</strong> — the photographer behind <em>Ava Lulu Photo</em>.
+      I’m based in Utah County and specialize in capturing genuine, natural moments that feel warm and timeless.</p>
+
+    <p>My style is a mix of soft light, clean composition, and quiet in-between moments.
+      I want your photos to feel like you: relaxed, connected, and a little bit cinematic.</p>
+
+    <p>I’m also a graphic designer, which means I think about <em>how</em> your images work together as a story.
+      From the way I frame a shot to the way your gallery flows, everything is considered.</p>
+
+    <h2>What I Value</h2>
+    <ul>
+      <li><strong>Comfort over posing</strong> — I’ll guide you, but I want you to move naturally.</li>
+      <li><strong>Quality over quantity</strong> — thoughtful, curated galleries instead of endless duplicates.</li>
+      <li><strong>Real connection</strong> — I care about who you are, not just the photos we make.</li>
+    </ul>
+
+    <p>When I’m not behind the camera, you’ll probably find me designing, hunting for good light,
+      or exploring Utah with my husband.</p>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; 2025 Ava Lulu Photo • <a href="mailto:avaluluphoto@gmail.com">avaluluphoto@gmail.com</a></p>
+      <address>Utah County • <a href="tel:+18015551234">+1 (801) 555-1234</a> • <a href="https://www.instagram.com/avaluluphoto" target="_blank" rel="noopener">@avaluluphoto</a></address>
+    </div>
+  </footer>
+
+  <!-- NAV TOGGLE -->
+  <script>
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('#primary-nav');
+    if (btn && nav) {
+      btn.addEventListener('click', () => {
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        nav.classList.toggle('open');
+      });
+    }
+  </script>
+</body>
+</html>
