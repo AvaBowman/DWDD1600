@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Vacation Packages — The Italian Itinerary</title>
+  <meta name="description" content="Three simple Italy vacation packages with hotels, trains and rental cars already in place.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Fonts: Italiana + Lato -->
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon + styles -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="brand">
+    <a href="index.html">
+      <img src="images/LOGO.jpg" alt="The Italian Itinerary logo." style="height:40px; width:auto;">
+      <div>
+        <span class="brand-text-main">The Italian Itinerary</span>
+        <span class="brand-text-sub">Traveling Italy on a gentle budget</span>
+      </div>
+    </a>
+  </div>
+
+  <button class="nav-toggle" aria-label="Toggle navigation">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="video.html">Video</a></li>
+      <li><a href="packages.html" class="current">Packages</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!-- TOP INTRO CARD -->
+  <section class="card">
+    <h1 class="page-title">Vacation packages</h1>
+    <p>
+      These sample packages show how a real trip could look. Each one includes a main city,
+      hotel ideas and a simple plan for trains or rental cars. Prices are rough estimates
+      for two travelers so you can see the overall scale.
+    </p>
+
+    <!-- Downloadable pamphlet link -->
+    <p style="margin-top:1.2rem;">
+      <a href="italian-itinerary-packages-pamphlet-landscape.pdf" class="package-pill" download>
+        Download these packages as a printable brochure!
+      </a>
+    </p>
+  </section>
+
+  <!-- PACKAGES GRID -->
+  <section class="card">
+    <div class="package-grid">
+
+      <!-- Package 1 -->
+      <article class="package-card">
+        <img src="images/como-destination.jpg" alt="Lake Como villa and water view.">
+        <h2>Milano &amp; Lake Day</h2>
+        <p>
+          Start with two nights in Milan so you can rest, walk the piazza and enjoy easy pizza and gelato.
+          Then take a simple day trip to Lake Como for wide water views and a quiet ferry ride between towns.
+        </p>
+
+        <p><strong>Destination:</strong> Milano with a Lake Como day trip</p>
+        <p><strong>Hotel:</strong> Room Mate Giulia</p>
+        <p>
+          <strong>Rental / Transport:</strong> Trenitalia regional trains between Milan and Como.
+          You can add a small rental car if you want to drive along the lake.
+        </p>
+
+        <div class="package-actions">
+          <a class="package-pill" href="https://room-matehotels.com/en/giulia/" target="_blank" rel="noopener">
+            Visit the hotel here
+          </a>
+          <a class="package-pill" href="https://www.trenitalia.com/en.html" target="_blank" rel="noopener">
+            View train schedules
+          </a>
+        </div>
+
+        <p class="price">
+          Estimated package cost: $1,450 (2 travelers, 3 nights, economy flights not included)
+        </p>
+      </article>
+
+      <!-- Package 2 -->
+      <article class="package-card">
+        <img src="images/Firenze-packages.jpg" alt="Cathedral and dome in Florence, Italy.">
+        <h2>Firenze &amp; Tuscany Slow Days</h2>
+        <p>
+          Spend four nights in Florence with time for sandwiches, art and river walks.
+          Add a small group day tour into the Tuscan countryside for farm views and a simple lunch.
+        </p>
+
+        <p><strong>Destination:</strong> Firenze with a Tuscany countryside tour</p>
+        <p><strong>Hotel:</strong> Hotel L'Orologio Firenze</p>
+        <p>
+          <strong>Rental / Transport:</strong> Mostly walking and local buses in the city,
+          plus a coach or small van for the countryside tour.
+        </p>
+
+        <div class="package-actions">
+          <a class="package-pill" href="https://www.hotelorologioflorence.com/" target="_blank" rel="noopener">
+            Visit the hotel here
+          </a>
+          <a class="package-pill" href="https://tuscany-vespatours.com/" target="_blank" rel="noopener">
+            Sample countryside Vespa tours
+          </a>
+        </div>
+
+        <p class="price">
+          Estimated package cost: $1,980 (2 travelers, 4 nights, breakfast included)
+        </p>
+      </article>
+
+      <!-- Package 3 -->
+      <article class="package-card">
+        <img src="images/rome-packages.jpg" alt="Interior view of a dome ceiling in Rome, Italy.">
+        <h2>Roma, Vatican &amp; Coast Evening</h2>
+        <p>
+          Three nights in Rome with a Vatican visit and Colosseum tour.
+          Add one evening at the coast in Ostia or Fregene for a simple sunset walk by the sea.
+        </p>
+
+        <p><strong>Destination:</strong> Roma with a short coast escape</p>
+        <p><strong>Hotel:</strong> Hotel Artemide, Roma</p>
+        <p>
+          <strong>Rental / Transport:</strong> City taxis and metro, plus a small rental car
+          for the afternoon and evening at the coast.
+        </p>
+
+        <div class="package-actions">
+          <a class="package-pill" href="https://www.hotelartemide.it/" target="_blank" rel="noopener">
+            Visit the hotel here
+          </a>
+          <a class="package-pill" href="https://www.hertz.com/rentacar/reservation/" target="_blank" rel="noopener">
+            Book rental car here
+          </a>
+        </div>
+
+        <p class="price">
+          Estimated package cost: $2,150 (2 travelers, 3 nights, basic tours included)
+        </p>
+      </article>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> The Italian Itinerary.</p>
+</footer>
+
+<script>
+  // Set current year in footer
+  const yearSpan = document.getElementById("year");
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
+
+  // Mobile nav toggle
+  const navToggle = document.querySelector(".nav-toggle");
+  if (navToggle) {
+    navToggle.addEventListener("click", function () {
+      document.body.classList.toggle("nav-open");
+    });
+  }
+</script>
+</body>
+</html>

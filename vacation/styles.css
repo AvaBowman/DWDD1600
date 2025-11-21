@@ -1,0 +1,853 @@
+/* COLOR PALETTE */
+
+:root {
+  --gold: #e5a13e;
+  --aqua: #cfe7e5;
+  --teal: #213638;
+  --bg-soft: #faf7f1;
+  --white: #ffffff;
+  --text-main: #213638;
+  --text-muted: #6d757e;
+  --shadow-soft: 0 12px 30px rgba(0, 0, 0, 0.16);
+}
+
+/* GLOBAL */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Lato", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text-main);
+  background: radial-gradient(circle at top, var(--aqua), var(--bg-soft));
+}
+
+main {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 2.4rem 1.4rem 3.4rem;
+}
+
+/* headings */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Italiana", serif;
+  letter-spacing: 0.04em;
+}
+
+/* reusable card */
+
+.card {
+  background: var(--white);
+  border-radius: 22px;
+  box-shadow: var(--shadow-soft);
+  padding: 1.8rem 2rem;
+  margin-bottom: 1.8rem;
+  border: 1px solid rgba(33, 54, 56, 0.06);
+}
+
+/* HEADER + NAVIGATION */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: linear-gradient(90deg, var(--white), rgba(255, 255, 255, 0.96));
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(33, 54, 56, 0.08);
+  padding: 0.8rem 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand a {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-decoration: none;
+  color: var(--teal);
+}
+
+.brand img {
+  display: block;
+}
+
+.brand-text-main {
+  font-family: "Italiana", serif;
+  font-size: 1.5rem;
+}
+
+.brand-text-sub {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* nav list */
+
+.main-nav {
+  display: block;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 0.9rem;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  position: relative;
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--teal);
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.main-nav a.current {
+  background: var(--gold);
+  color: var(--white);
+}
+
+.main-nav a:hover:not(.current) {
+  background: rgba(207, 231, 229, 0.7);
+}
+
+/* hamburger button */
+
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  padding: 0.3rem;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--teal);
+  border-radius: 999px;
+  margin: 4px 0;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* hamburger animation when open */
+
+.nav-open .nav-toggle span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.nav-open .nav-toggle span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-open .nav-toggle span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* HOME: FULL-BLEED HERO */
+
+.home .hero-shell {
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0 0 2.4rem;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+/* default hero styles */
+
+.hero-shell {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-media {
+  position: relative;
+  min-height: min(75vh, 620px);
+}
+
+.hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* lighter overlay */
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(33, 54, 56, 0.55), rgba(33, 54, 56, 0.1));
+}
+
+.hero-content {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 1.8rem;
+  align-items: center;
+  padding: 2.6rem 2.8rem;
+  color: var(--white);
+}
+
+/* hero text */
+
+.hero-text h1 {
+  font-size: clamp(2.6rem, 4.6vw, 3.4rem);
+  margin: 0 0 0.7rem;
+}
+
+.hero-text p {
+  margin: 0 0 1.2rem;
+  max-width: 32rem;
+  font-size: 1.05rem;
+}
+
+/* buttons */
+
+.btn-primary {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 0.7rem 1.7rem;
+  border: none;
+  background: linear-gradient(135deg, var(--gold), #ffcf7a);
+  color: var(--teal);
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  font-size: 0.95rem;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, filter 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+/* HOME: HEADER OVER HERO */
+
+.home .site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  border-bottom: none;
+  box-shadow: none;
+}
+
+.home .brand-text-main,
+.home .brand-text-sub {
+  color: #ffffff;
+}
+
+.home .main-nav a {
+  color: #ffffff;
+  background: transparent;
+}
+
+.home .main-nav a.current {
+  background: rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+}
+
+.home .nav-toggle span {
+  background: #ffffff;
+}
+
+/* HOME SECTIONS */
+
+.city-picks {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.city-picks h2 {
+  font-size: 1.9rem;
+  margin-top: 0;
+}
+
+.city-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.4rem;
+  margin-top: 1.3rem;
+}
+
+@media (min-width: 900px) {
+  .city-row {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    justify-items: center;
+    /* smaller gaps = closer together */
+    column-gap: 1.2rem;
+    row-gap: 0.9rem;
+  }
+
+  .city-pill {
+    width: 120px;
+  }
+
+  .city-pill img {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+.city-pill {
+  width: 120px;
+  text-decoration: none;
+  color: var(--teal);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.city-pill img {
+  width: 110px;
+  height: 110px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 4px solid var(--gold);
+  box-shadow: var(--shadow-soft);
+  background: var(--white);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.city-pill span {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* hover for city pills */
+
+.city-pill:hover img {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.4rem;
+}
+
+.home-grid h3 {
+  margin-top: 0;
+}
+
+/* INFO SECTION (Our story / Who we plan for / etc.) */
+
+.info-section {
+  padding: clamp(2.5rem, 4vw, 3.5rem);
+}
+
+.info-grid {
+  display: grid;
+  gap: 2.5rem 4rem;
+  align-items: flex-start;
+}
+
+/* 1 column on mobile */
+.info-grid article {
+  max-width: 32rem;
+}
+
+/* 2 x 2 grid on larger screens */
+@media (min-width: 800px) {
+  .info-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Headings */
+.info-section h3 {
+  font-family: "Italiana", serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.04em;
+  margin: 0 0 0.5rem;
+}
+
+/* Body text */
+.info-section p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* Gold accent line instead of dot */
+.info-section article {
+  padding-left: 0.9rem;
+  border-left: 3px solid rgba(229, 161, 62, 0.4); /* soft gold */
+}
+
+
+
+/* ABOUT SECTION */
+
+.about-card {
+  padding: 1.8rem 2rem;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.3fr);
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  border: 3px solid var(--aqua);
+  display: block;
+}
+
+.about-text h2 {
+  margin-top: 0;
+  font-size: 1.7rem;
+}
+
+.about-text p {
+  margin: 0 0 0.8rem;
+  font-size: 1rem;
+}
+
+/* testimonials */
+
+.testimonials h2 {
+  margin-top: 0;
+}
+
+.testimonial-wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 0.8rem;
+}
+
+.testimonial blockquote {
+  margin: 0 0 0.6rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* DESTINATIONS GALLERY */
+
+.page-title {
+  margin-top: 0;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.4rem;
+}
+
+/* full-card destination links */
+
+.gallery-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 20px;
+}
+
+.gallery-card figure {
+  margin: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  background: var(--white);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.gallery-card:hover figure {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+.gallery img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 4px solid var(--gold);
+}
+
+.gallery figcaption {
+  padding: 0.9rem 1.1rem 1.1rem;
+}
+
+.gallery h2 {
+  margin: 0 0 0.4rem;
+  font-size: 1.2rem;
+}
+
+.gallery p {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* CITY DETAIL PAGES */
+
+.city-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 1.7rem;
+  align-items: center;
+}
+
+.city-hero h1 {
+  margin-top: 0;
+}
+
+.city-hero img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  max-height: 260px;
+  border: 3px solid var(--aqua);
+}
+
+.city-hero p {
+  font-size: 1rem;
+}
+
+.places-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.3rem;
+}
+
+.place-card {
+  background: var(--white);
+  border-radius: 18px;
+  padding: 1.1rem 1.3rem;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(229, 161, 62, 0.35);
+}
+
+.place-card h2 {
+  margin-top: 0;
+  font-size: 1.05rem;
+}
+
+.place-card p {
+  margin: 0.2rem 0;
+  font-size: 0.95rem;
+}
+
+.map-link {
+  font-size: 0.85rem;
+  color: var(--teal);
+  word-break: break-all;
+}
+
+.map-link a {
+  color: inherit;
+}
+
+/* MAP CARDS */
+
+.map-card h2 {
+  margin-top: 0;
+}
+
+/* Two-column layout for Pisa + Livorno maps */
+.map-grid-two {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.2rem;
+  margin-top: 0.8rem;
+}
+
+/* Outer shell for each individual map */
+.map-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  border: 3px solid var(--aqua);
+  background: var(--white);
+}
+
+.map-frame iframe {
+  border: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* PACKAGES PAGE */
+
+.package-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.4rem;
+}
+
+.package-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 0.8rem;
+  border: 3px solid var(--aqua);
+}
+
+.package-card h2 {
+  margin-top: 0;
+}
+
+.price {
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+
+/* Package link buttons */
+
+.package-actions {
+  margin-top: 0.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.package-pill {
+  display: inline-block;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--gold), #ffcf7a);
+  color: var(--teal);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none;
+  box-shadow: var(--shadow-soft);
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, filter 0.2s ease;
+}
+
+.package-pill:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+
+/* VIDEO PAGE */
+
+.video-shell {
+  padding: 1.4rem 1.6rem 1.7rem;
+  background: var(--aqua);
+  border-radius: 22px;
+  box-shadow: var(--shadow-soft);
+}
+
+.responsive-video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  border: 4px solid var(--white);
+}
+
+.responsive-video iframe {
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+/* CONTACT FORM */
+
+.contact-form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 1.3rem;
+}
+
+.contact-form legend {
+  font-size: 1.1rem;
+  margin-bottom: 0.7rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.9rem;
+}
+
+.label-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form input[type="number"],
+.contact-form select,
+.contact-form textarea {
+  border-radius: 12px;
+  border: 1px solid rgba(33, 54, 56, 0.25);
+  padding: 0.55rem 0.75rem;
+  font: inherit;
+  background: var(--white);
+}
+
+.contact-form textarea {
+  min-height: 120px;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: 2px solid var(--gold);
+  outline-offset: 1px;
+}
+
+.inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-right: 1.1rem;
+  font-size: 0.9rem;
+}
+
+.form-actions {
+  margin-top: 0.6rem;
+}
+
+/* FOOTER */
+
+.site-footer {
+  text-align: center;
+  padding: 1.4rem 1rem 2rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* THANK YOU PAGE */
+
+.thanks-body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, var(--aqua), var(--gold));
+  font-family: "Lato", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.thanks-card {
+  background: var(--white);
+  border-radius: 22px;
+  padding: 2rem 2.3rem;
+  box-shadow: var(--shadow-soft);
+  max-width: 420px;
+  text-align: center;
+}
+
+/* RESPONSIVE NAV + LAYOUT */
+
+@media (max-width: 800px) {
+  .site-header {
+    position: static;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .home .site-header {
+    position: absolute;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 64px;
+    right: 0;
+    left: 0;
+    display: none;
+    padding: 0.8rem 1.2rem 1.2rem;
+    background: rgba(33, 54, 56, 0.96);
+    backdrop-filter: blur(12px);
+  }
+
+  .nav-open .main-nav {
+    display: block;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .main-nav a {
+    width: 100%;
+    text-align: center;
+    border-radius: 999px;
+    background: transparent;
+    color: #ffffff;
+  }
+
+  .main-nav a.current {
+    background: var(--gold);
+    color: #ffffff;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    padding: 1.9rem 1.6rem;
+  }
+
+  .city-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+}

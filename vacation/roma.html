@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Roma Guide — The Italian Itinerary</title>
+  <meta name="description" content="Rome notes with gelato, tours and temple tips.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="brand">
+    <a href="index.html">
+      <img src="images/LOGO.jpg" alt="The Italian Itinerary logo." style="height:40px; width:auto;">
+      <div>
+        <span class="brand-text-main">The Italian Itinerary</span>
+        <span class="brand-text-sub">Traveling Italy on a gentle budget</span>
+      </div>
+    </a>
+  </div>
+
+  <button class="nav-toggle" aria-label="Toggle navigation">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="destinations.html" class="current">Destinations</a></li>
+      <li><a href="video.html">Video</a></li>
+      <li><a href="packages.html">Packages</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="card city-hero">
+    <div>
+      <h1>Roma</h1>
+      <p>
+        Rome is full of big sights and busy streets, but it also has quiet corners. Plan a mix of tours and slow walks so you do not feel overwhelmed.
+      </p>
+    </div>
+    <div>
+      <img src="images/ROMA.jpg" alt="View of Rome.">
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Food and treats</h2>
+    <div class="places-grid">
+      <article class="place-card">
+        <h2>Gelateria il Capriccio di Carla</h2>
+        <p>
+          Friendly gelato shop that is perfect if you are near this part of the city. Choose a cup if it is very hot so it lasts longer.
+        </p>
+        <p><em>Via Agostino Depretis 61, 00184 Rome</em></p>
+        <p class="map-link">
+          <a href="https://www.google.com/maps?q=Gelateria+il+Capriccio+di+Carla+Via+Agostino+Depretis+61+Roma" target="_blank">
+            Open in Google Maps
+          </a>
+        </p>
+      </article>
+
+      <article class="place-card">
+        <h2>Toto Ristorante</h2>
+        <p>
+          Restaurant near the Spanish Steps. Good for an evening meal after you have walked the main shopping streets.
+        </p>
+        <p><em>Via delle Carrozze 10, 00187 Rome</em></p>
+        <p class="map-link">
+          <a href="https://www.google.com/maps?q=Toto+Ristorante+Via+delle+Carrozze+10+Roma" target="_blank">
+            Open in Google Maps
+          </a>
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Tours and sights</h2>
+    <div class="places-grid">
+      <article class="place-card">
+        <h2>Night Golf Cart Tour</h2>
+        <p>
+          Many companies offer small group tours in golf carts at night. It is a fun way to see the big sights when they are lit and the air is cooler.
+        </p>
+        <p class="map-link">
+          <a href="https://www.google.com/maps/search/golf+cart+night+tour+Rome" target="_blank">
+            Open in Google Maps
+          </a>
+        </p>
+      </article>
+
+      <article class="place-card">
+        <h2>Vatican Museums and St Peter's</h2>
+        <p>
+          Plan several hours here. Buy tickets ahead of time and wear comfortable shoes. The art feels endless in a good way.
+        </p>
+        <p class="map-link">
+          <a href="https://www.google.com/maps?q=Vatican+Museums+Rome" target="_blank">
+            Open in Google Maps
+          </a>
+        </p>
+      </article>
+
+      <article class="place-card">
+        <h2>Colosseum</h2>
+        <p>
+          Look for tickets that include the higher levels or the arena floor. Being up high keeps you away from crowds and gives a full view into the structure.
+        </p>
+        <p class="map-link">
+          <a href="https://www.google.com/maps?q=Colosseum+Rome" target="_blank">
+            Open in Google Maps
+          </a>
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Rome Temple</h2>
+    <div class="places-grid">
+      <article class="place-card">
+        <h2>Rome Italy Temple</h2>
+        <p>
+          Peaceful stop outside the city center. The visitors center is very kind and can help you call a taxi when you are ready to leave.
+        </p>
+        <p class="map-link">
+          <a href="https://www.google.com/maps?q=Rome+Italy+Temple" target="_blank">
+            Open in Google Maps
+          </a>
+        </p>
+      </article>
+    </div>
+    <p>
+      It is best to take a taxi to and from the temple. Buses are possible but can feel confusing if you are new to the area.
+    </p>
+  </section>
+
+  <section class="card map-card">
+    <h2>Roma map</h2>
+    <p>Use this to see how the main sights spread across the city.</p>
+    <div class="map-frame">
+      <iframe
+        src="https://www.google.com/maps?q=Rome+Italy&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> The Italian Itinerary.</p>
+</footer>
+
+<script>
+  const yearSpan = document.getElementById("year");
+  if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+
+  const navToggle = document.querySelector(".nav-toggle");
+  if (navToggle) {
+    navToggle.addEventListener("click", function () {
+      document.body.classList.toggle("nav-open");
+    });
+  }
+</script>
+</body>
+</html>

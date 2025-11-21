@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Bologna Guide — The Italian Itinerary</title>
+  <meta name="description" content="Bologna notes with rich food and calm streets.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="brand">
+    <a href="index.html">
+      <img src="images/LOGO.jpg" alt="The Italian Itinerary logo." style="height:40px; width:auto;">
+      <div>
+        <span class="brand-text-main">The Italian Itinerary</span>
+        <span class="brand-text-sub">Traveling Italy on a gentle budget</span>
+      </div>
+    </a>
+  </div>
+
+  <button class="nav-toggle" aria-label="Toggle navigation">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="destinations.html" class="current">Destinations</a></li>
+      <li><a href="video.html">Video</a></li>
+      <li><a href="packages.html">Packages</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="card city-hero">
+    <div>
+      <h1>Bologna</h1>
+      <p>
+        Bologna feels warm and rich. Covered walkways keep you shaded and the food is deep and comforting. Order anything that mentions Bolognese sauce and it will probably be good.
+      </p>
+    </div>
+    <div>
+      <img src="images/BOLOGNA.jpeg" alt="Square in Bologna.">
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Food that feels like home</h2>
+    <div class="places-grid">
+
+      <article class="place-card">
+        <h2>Adesso Pasta Car Ristorante</h2>
+        <p>
+          The lasagna Bolognese here is a favorite dish from all of Italy. Order the house special and choose a generous portion.
+        </p>
+        <p><em>Via Quattro Novembre 12, 40123 Bologna</em></p>
+        <p class="map-link">
+          <a href="https://www.google.com/maps?q=Adesso+Pasta+Car+Via+Quattro+Novembre+12+Bologna" target="_blank">
+            Open in Google Maps
+          </a>
+        </p>
+      </article>
+
+      <article class="place-card">
+        <h2>Taverna del Postiglione</h2>
+        <p>
+          Cozy restaurant with classic dishes and a nice mood. Plan ahead because you usually need a reservation.
+        </p>
+        <p><em>Via Marchesana 6E, 40124 Bologna</em></p>
+        <p class="map-link">
+          <a href="https://www.google.com/maps?q=Taverna+del+Postiglione+Via+Marchesana+6E+Bologna" target="_blank">
+            Open in Google Maps
+          </a>
+        </p>
+      </article>
+
+      <article class="place-card">
+        <h2>Piada Mia</h2>
+        <p>
+          Grab and go piadina, which is a flat bread sandwich. Easy lunch when you are walking under the porticos.
+        </p>
+        <p><em>Via Zamboni 5A, 40126 Bologna</em></p>
+        <p class="map-link">
+          <a href="https://www.google.com/maps?q=Piada+Mia+Via+Zamboni+5A+Bologna" target="_blank">
+            Open in Google Maps
+          </a>
+        </p>
+      </article>
+
+      <article class="place-card">
+        <h2>Cavour Gelato</h2>
+        <p>
+          Fancy gelato spot on a busy square. It often has a line, but it is fun to stand and watch the city move around you.
+        </p>
+        <p><em>Piazza Cavour 1, 40124 Bologna</em></p>
+        <p class="map-link">
+          <a href="https://www.google.com/maps?q=Gelateria+Cavour+Piazza+Cavour+1+Bologna" target="_blank">
+            Open in Google Maps
+          </a>
+        </p>
+      </article>
+
+      <article class="place-card">
+        <h2>Gianni Gelato</h2>
+        <p>
+          Very loved gelato with generous scoops. Try a chocolate flavor and one bright fruit flavor together.
+        </p>
+        <p><em>Via Monte Grappa 11A, 40121 Bologna</em></p>
+        <p class="map-link">
+          <a href="https://www.google.com/maps?q=Gelateria+Gianni+Via+Monte+Grappa+11A+Bologna" target="_blank">
+            Open in Google Maps
+          </a>
+        </p>
+      </article>
+
+    </div>
+    <p>
+      When in doubt, order any pasta that notes it is served alla Bolognese. This region is proud of that sauce and it really shows.
+    </p>
+  </section>
+
+  <section class="card map-card">
+    <h2>Bologna map</h2>
+    <p>See how the food spots line up around the old center and porticos.</p>
+    <div class="map-frame">
+      <iframe
+        src="https://www.google.com/maps?q=Bologna+Italy&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> The Italian Itinerary.</p>
+</footer>
+
+<script>
+  const yearSpan = document.getElementById("year");
+  if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+
+  const navToggle = document.querySelector(".nav-toggle");
+  if (navToggle) {
+    navToggle.addEventListener("click", function () {
+      document.body.classList.toggle("nav-open");
+    });
+  }
+</script>
+</body>
+</html>
